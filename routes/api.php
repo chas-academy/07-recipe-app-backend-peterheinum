@@ -9,7 +9,7 @@ Route::group([
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
     Route::post('saverecipe', 'RecipeController@store');
-    
+    Route::post('deleterecipe', 'RecipeController@deleteRecipe');
 
     Route::get('getSavedRecipes', 'RecipeController@getSavedRecipes');
     

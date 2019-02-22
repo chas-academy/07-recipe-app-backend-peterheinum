@@ -10,7 +10,7 @@ class RecipeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api')->except(['get', 'store', 'getSavedRecipes']);
+        $this->middleware('auth:api')->except(['get', 'store', 'getSavedRecipes', 'deleteRecipe']);
     }
 
     public function index()
@@ -22,6 +22,12 @@ class RecipeController extends Controller
     public function get()
     {
         return 'hello';
+    }
+
+    public function deleteRecipe(Request $request)
+    {
+        Recipe::where('id', $request->id)->delete();
+        return RecipeResource::collection(Recipe::all());
     }
 
     public function getSavedRecipes()
