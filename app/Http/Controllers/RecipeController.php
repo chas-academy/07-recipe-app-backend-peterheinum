@@ -24,15 +24,9 @@ class RecipeController extends Controller
         return 'hello';
     }
 
-    public function getSavedRecipes($urlParams)
+    public function getSavedRecipes()
     {
-        $email = $urlParams['email'];
-        $collection = RecipeResource::collection(Recipe::all());
-        foreach ($collection as $key => $value) {
-            if($key == $email){
-                
-            }
-        }
+        return RecipeResource::collection(Recipe::all());
     }
 
     public function store(Request $request)

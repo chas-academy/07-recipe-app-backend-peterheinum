@@ -11,6 +11,6 @@ Route::group([
     Route::post('saverecipe', 'RecipeController@store');
     
 
-    Route::get('getSavedRecipes/{email}', 'RecipeController@getSavedRecipes');
+    Route::get('getSavedRecipes', 'RecipeController@getSavedRecipes');
     
 });
