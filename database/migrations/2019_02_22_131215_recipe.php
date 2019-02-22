@@ -13,14 +13,14 @@ class Recipe extends Migration
      */
     public function up()
     {
-        Schema::create('recipe_list', function (Blueprint $table) {
+        Schema::create('recipedb.recipes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email');
             $table->string('label');
             $table->string('image');
             $table->string('calories');
             $table->string('healthLabels');
-            $table->string('ingredientLines');
+            $table->longText('ingredientLines');
             $table->timestamps();
         });
     }

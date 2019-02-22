@@ -8,6 +8,9 @@ Route::group([
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
+    Route::post('saverecipe', 'RecipeController@store');
+    
 
-    Route::get('recipe', 'RecipeController@get');
+    Route::get('getSavedRecipes/{email}', 'RecipeController@getSavedRecipes');
+    
 });
