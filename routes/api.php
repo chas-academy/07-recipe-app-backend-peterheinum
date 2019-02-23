@@ -10,6 +10,7 @@ Route::group([
     Route::post('me', 'AuthController@me');
     Route::post('saverecipe', 'RecipeController@store');
     Route::post('deleterecipe', 'RecipeController@deleteRecipe');
+    Route::post('updaterecipe', 'RecipeController@updateRecipe');
 
     Route::get('getSavedRecipes', 'RecipeController@getSavedRecipes');
     
