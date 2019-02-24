@@ -42,6 +42,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
+            // 'host' => 'my90b.sqlserver.se',
+            // 'port' => '3306',
+            // 'database' => '235231-recipe-db',
+            // 'username' => '235231_mo94504',
+            // 'password' => 'Xf3zhV6r8znzzheY',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),
